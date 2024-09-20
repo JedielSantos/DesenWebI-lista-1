@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Lista de Tarefas</h1>
+        <button id="theme-toggle">Trocar Tema</button>
+    </header>
+    <main>
+        <section>
+            <input type="text" id="task-filter" placeholder="Filtrar tarefas...">
+        </section>
+        <section id="task-section">
+            <input type="text" id="new-task" placeholder="Adicionar nova tarefa">
+            <button id="add-task-btn">Adicionar Tarefa</button>
+            <ul id="task-list"></ul>
+        </section>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>
