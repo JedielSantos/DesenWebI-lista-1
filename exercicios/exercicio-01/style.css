@@ -1,106 +1,119 @@
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
-}
-
-.navbar {
-    background: #333;
-    color: white;
-    padding: 10px;
-}
-
-.logo {
+    box-sizing: border-box;
+  }
+  
+  /* Estilo 1: Display block com float*/
+  .navbar {
+    display: block;
+    margin: 2%;
+    padding: 10px 10%;
+    margin-bottom: 3%;
+  }
+  
+  .logo {
     float: left;
     font-size: 24px;
-    margin-right: 20px;
-}
-
-#menu {
+    font-weight: bold;
+  }
+  
+  #menu {
     float: right;
-}
-
-#menu ul {
-    list-style-type: none;
+  }
+  
+  #menu ul {
+    list-style: none;
     margin: 0;
     padding: 0;
-}
-
-.menu-item {
-    display: inline;
-    margin-left: 20px;
-}
-
-.container {
-    clear: both;
-    padding: 20px;
-}
-
-/* Estilo 1: Float */
-.estilo1 {
-    border: 2px solid #007BFF;
-    border-radius: 8px;
-    margin: 20px;
-    padding: 20px;
-    background-color: #f0f8ff; /* Cor de fundo clara */
-}
-
-.estilo1 .linha {
-    overflow: hidden; /* Para garantir que o float funcione */
-}
-
-.estilo1 .coluna {
-    width: 30%;
+  }
+  
+  #menu ul li {
     float: left;
-    margin-right: 3.33%; /* 10% menos o espaço entre colunas */
-}
-
-.estilo1 .coluna:last-child {
-    margin-right: 0; /* Remove a margem da última coluna */
-}
-
-/* Estilo 2: Flexbox */
-.estilo2 {
-    border: 2px solid #28A745;
-    border-radius: 8px;
-    margin: 20px;
-    padding: 20px;
-    background-color: #e9ffe9; /* Cor de fundo clara */
-}
-
-.estilo2 .linha {
+  }
+  
+  #menu ul li a {
+    padding: 10px 20px;
+    display: block;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  #menu ul li a:hover {
+    background-color: #ddd;
+    border-bottom: 3px solid #333;
+  }
+  
+  /* Estilo 2: Display flex para o conteúdo principal (jumbotron) */
+  .jumbotron {
     display: flex;
-    justify-content: space-between;
-}
-
-.estilo2 .coluna {
-    flex: 1;
-    margin-right: 20px;
-}
-
-.estilo2 .coluna:last-child {
-    margin-right: 0; /* Remove a margem da última coluna */
-}
-
-/* Estilo 3: Grid */
-.estilo3 {
-    border: 2px solid #FFC107;
-    border-radius: 8px;
-    margin: 20px;
-    padding: 20px;
-    background-color: #fff3cd; /* Cor de fundo clara */
-}
-
-.estilo3 .linha {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Cria três colunas iguais */
-    gap: 20px; /* Espaço entre as colunas */
-}
-
-footer {
-    background: #333;
-    color: white;
+    flex-direction: column; /* Alinha itens verticalmente */
+    justify-content: center;
+    align-items: center;
+    background-color: #e9ecef;
+    padding: 2%;
+    margin-bottom: 30px;
     text-align: center;
-    padding: 10px 0;
-    clear: both;
-}
+  }
+  
+  .jumbotron h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .jumbotron p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .jumbotron .btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  /* Estilo 3: Display grid para as colunas na .container-clearfix */
+  .container-clearfix {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Três colunas de largura igual */
+    gap: 2%; /* Espaço entre as colunas */
+    padding: 0 10%;
+  }
+  
+  .coluna {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  .coluna h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .coluna p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+  
+  .coluna .btn {
+    padding: 8px 16px;
+    background-color: #6c757d;
+    color: white;
+    border-radius: 4px;
+  }
+  
+  /* Estilo do rodapé fixo */
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-top: 1px solid #ccc;
+  }
