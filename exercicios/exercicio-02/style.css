@@ -1,0 +1,125 @@
+/* Normalização básica */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonte externa */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Centraliza verticalmente */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+:root {
+    --background: #ffffff;
+    --text: #000000;
+    --button-bg: #008cba;
+    --button-text: #ffffff;
+}
+
+.dark-theme {
+    --background: #121212;
+    --text: #ffffff;
+    --button-bg: #1e88e5;
+}
+
+/* Centralizar a lista de tarefas em um box */
+#task-container {
+    width: 100%;
+    max-width: 600px; /* Limita a largura da lista */
+    background-color: #f9f9f9; /* Cor do fundo do contêiner */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para o box */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilos das tarefas */
+.task-item {
+    background-color: #f4f4f4;
+    color: #000000; /* Texto preto no modo claro */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border-radius: 5px;
+    width: 100%; /* Para ocupar toda a largura do contêiner */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Estilos das tarefas no modo escuro */
+.dark-theme .task-item {
+    background-color: #333333; /* Fundo escuro */
+    color: #ffffff; /* Texto branco no modo escuro */
+}
+
+.task-item.completed {
+    text-decoration: line-through;
+    background-color: #d3d3d3;
+}
+
+.dark-theme .task-item.completed {
+    background-color: #555555; /* Fundo para tarefas concluídas no modo escuro */
+}
+
+/* Estilos do cabeçalho e botões */
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#theme-toggle {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    padding: 0.5rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Input e botões de adicionar tarefa */
+#new-task {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#add-task {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+    }
+
+    #task-container {
+        padding: 10px;
+    }
+}

@@ -1,29 +1,85 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Tarefas</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Exemplo de Estilos</title>
+    <meta name="description" content="Exemplo de implementação de diferentes estilos" />
+    <meta name="author" content="SEU_NOME" />
+
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    <header>
-        <h1>Lista de Tarefas</h1>
-        <button id="theme-toggle">Trocar Tema</button>
-    </header>
+    <nav class="navbar clearfix">
+        <a href="#" class="logo">Logotipo</a>
+        <div id="menu">
+            <ul>
+                <li class="menu-item"><a class="menu-link" href="#">Parceiros</a></li>
+                <li class="menu-item"><a class="menu-link" href="#">Contato</a></li>
+                <li class="menu-item"><a class="menu-link" href="#">Sobre</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <main>
-        <section>
-            <input type="text" id="task-filter" placeholder="Filtrar tarefas...">
+        <section class="estilo1">
+            <h2>Estilo 1: Float</h2>
+            <div class="container clearfix">
+                <div class="coluna">
+                    <h3>Coluna 1</h3>
+                    <p>Conteúdo da coluna 1 com float.</p>
+                </div>
+                <div class="coluna">
+                    <h3>Coluna 2</h3>
+                    <p>Conteúdo da coluna 2 com float.</p>
+                </div>
+                <div class="coluna">
+                    <h3>Coluna 3</h3>
+                    <p>Conteúdo da coluna 3 com float.</p>
+                </div>
+            </div>
         </section>
-        <section id="task-section">
-            <input type="text" id="new-task" placeholder="Adicionar nova tarefa">
-            <button id="add-task-btn">Adicionar Tarefa</button>
-            <ul id="task-list"></ul>
+
+        <section class="estilo2">
+            <h2>Estilo 2: Flexbox</h2>
+            <div class="linha">
+                <div class="coluna">
+                    <h3>Coluna 1</h3>
+                    <p>Conteúdo da coluna 1 com Flexbox.</p>
+                </div>
+                <div class="coluna">
+                    <h3>Coluna 2</h3>
+                    <p>Conteúdo da coluna 2 com Flexbox.</p>
+                </div>
+                <div class="coluna">
+                    <h3>Coluna 3</h3>
+                    <p>Conteúdo da coluna 3 com Flexbox.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="estilo3">
+            <h2>Estilo 3: Grid</h2>
+            <div class="linha">
+                <div class="coluna">
+                    <h3>Coluna 1</h3>
+                    <p>Conteúdo da coluna 1 com Grid.</p>
+                </div>
+                <div class="coluna">
+                    <h3>Coluna 2</h3>
+                    <p>Conteúdo da coluna 2 com Grid.</p>
+                </div>
+                <div class="coluna">
+                    <h3>Coluna 3</h3>
+                    <p>Conteúdo da coluna 3 com Grid.</p>
+                </div>
+            </div>
         </section>
     </main>
 
-    <script src="main.js"></script>
+    <footer>
+        <p>© SEU_NOME 2024</p>
+    </footer>
 </body>
 </html>

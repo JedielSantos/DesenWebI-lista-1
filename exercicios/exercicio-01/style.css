@@ -1,79 +1,106 @@
-/* Normalização básica */
-* {
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-/* Fonte externa */
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: var(--background);
-    color: var(--text);
-    transition: background-color 0.3s, color 0.3s;
+.navbar {
+    background: #333;
+    color: white;
+    padding: 10px;
 }
 
-:root {
-    --background: #ffffff;
-    --text: #000000;
-    --button-bg: #008cba;
-    --button-text: #ffffff;
+.logo {
+    float: left;
+    font-size: 24px;
+    margin-right: 20px;
 }
 
-.dark-theme {
-    --background: #121212;
-    --text: #ffffff;
-    --button-bg: #1e88e5;
+#menu {
+    float: right;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    background-color: var(--button-bg);
-    color: var(--button-text);
-}
-
-#task-section {
-    padding: 2rem;
-}
-
-#task-list {
+#menu ul {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
-.task-item {
+.menu-item {
+    display: inline;
+    margin-left: 20px;
+}
+
+.container {
+    clear: both;
+    padding: 20px;
+}
+
+/* Estilo 1: Float */
+.estilo1 {
+    border: 2px solid #007BFF;
+    border-radius: 8px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f0f8ff; /* Cor de fundo clara */
+}
+
+.estilo1 .linha {
+    overflow: hidden; /* Para garantir que o float funcione */
+}
+
+.estilo1 .coluna {
+    width: 30%;
+    float: left;
+    margin-right: 3.33%; /* 10% menos o espaço entre colunas */
+}
+
+.estilo1 .coluna:last-child {
+    margin-right: 0; /* Remove a margem da última coluna */
+}
+
+/* Estilo 2: Flexbox */
+.estilo2 {
+    border: 2px solid #28A745;
+    border-radius: 8px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #e9ffe9; /* Cor de fundo clara */
+}
+
+.estilo2 .linha {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    margin: 0.5rem 0;
-    background-color: #f4f4f4;
-    border-radius: 5px;
-    transition: background-color 0.3s;
 }
 
-.task-item.completed {
-    text-decoration: line-through;
-    background-color: #d3d3d3;
+.estilo2 .coluna {
+    flex: 1;
+    margin-right: 20px;
 }
 
-#theme-toggle {
-    background-color: var(--button-bg);
-    color: var(--button-text);
-    padding: 0.5rem;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
+.estilo2 .coluna:last-child {
+    margin-right: 0; /* Remove a margem da última coluna */
 }
 
-@media (max-width: 600px) {
-    header {
-        flex-direction: column;
-    }
+/* Estilo 3: Grid */
+.estilo3 {
+    border: 2px solid #FFC107;
+    border-radius: 8px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff3cd; /* Cor de fundo clara */
+}
 
-    #task-section {
-        padding: 1rem;
-    }
+.estilo3 .linha {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Cria três colunas iguais */
+    gap: 20px; /* Espaço entre as colunas */
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    clear: both;
 }

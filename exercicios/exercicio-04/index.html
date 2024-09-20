@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicativo de Fotos e Localização</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <h1>Aplicativo de Fotos e Localização</h1>
+
+    <div id="photo-section">
+        <video id="camera" autoplay></video>
+        <canvas id="canvas" style="display:none;"></canvas>
+        <div id="photo-container">
+            <img id="photo" alt="Sua Foto" style="display:none;">
+        </div>
+        <input type="file" id="upload-photo" accept="image/*" style="display:none;">
+        <button id="take-photo">Tirar Foto</button>
+        <button id="upload-button">Carregar Foto</button>
+    </div>
+
+    <div id="location-section">
+        <button id="get-location">Obter Localização Atual</button>
+        <div id="manual-location">
+            <input type="text" id="latitude" placeholder="Digite a latitude">
+            <input type="text" id="longitude" placeholder="Digite a longitude">
+        </div>
+        <div id="map" style="height: 300px; width: 100%;"></div>
+    </div>
+
+    <div id="details-section">
+        <input type="text" id="title" placeholder="Título" required>
+        <input type="text" id="description" placeholder="Descrição">
+        <button id="save-data">Salvar</button>
+    </div>
+
+    <div id="table-section">
+        <table id="photo-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Título</th>
+                    <th>Descrição</th>
+                    <th>Localização</th>
+                    <th>Data</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
