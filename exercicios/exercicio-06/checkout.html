@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - Minha Loja</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <h1>Checkout</h1>
+</nav>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Página Inicial</a></li>
+        <li><a href="cart.html">Carrinho</a></li>
+        <li><a href="checkout.html">Checkout</a></li>
+    </ul>
+</nav>
+
+    <main class="checkout-container">
+            <form id="checkoutForm">
+            <fieldset>
+                <legend>Informações de Entrega</legend>
+                <label for="name">Nome Completo:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="address">Endereço:</label>
+                <input type="text" id="address" name="address" required>
+
+                <label for="city">Cidade:</label>
+                <input type="text" id="city" name="city" required>
+
+                <label for="state">Estado:</label>
+                <select id="state" name="state" required>
+                    <option value="" disabled selected>Selecione</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <!-- Adicione outros estados aqui -->
+                </select>
+
+                <label for="postalCode">CEP:</label>
+                <input type="text" id="postalCode" name="postalCode" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Forma de Pagamento</legend>
+                <label for="paymentMethod">Método de Pagamento:</label>
+                <select id="paymentMethod" name="paymentMethod" required>
+                    <option value="" disabled selected>Selecione</option>
+                    <option value="creditCard">Cartão de Crédito</option>
+                    <option value="debitCard">Cartão de Débito</option>
+                    <option value="paypal">PayPal</option>
+                </select>
+
+                <div id="creditCardDetails" style="display: none;">
+                    <label for="cardNumber">Número do Cartão:</label>
+                    <input type="text" id="cardNumber" name="cardNumber" placeholder="**** **** **** ****">
+
+                    <label for="cardExpiration">Data de Validade:</label>
+                    <input type="text" id="cardExpiration" name="cardExpiration" placeholder="MM/AA">
+
+                    <label for="cardCVV">CVV:</label>
+                    <input type="text" id="cardCVV" name="cardCVV" placeholder="***">
+                </div>
+            </fieldset>
+
+            <button type="submit">Finalizar Compra</button>
+        </form>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+      <p>&copy; 2024 Loja de Informática. Todos os direitos reservados.</p>
+      <p>Formas de pagamento: Cartão de crédito, boleto, transferência bancária</p>
+      <div class="social-media">
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+      </div>
+    </footer>
+
+    <script src="main.js"></script> <!-- Link para o arquivo JavaScript -->
+</body>
+</html>

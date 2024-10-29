@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loja de Informática</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Menu de Navegação -->
+  <nav>
+    <h1>Loja de Informática</h1>
+  </nav>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Página Inicial</a></li>
+      <li><a href="cart.html">Carrinho</a></li>
+      <li><a href="checkout.html">Checkout</a></li>
+    </ul>
+  </nav>
+
+  <!-- Barra de Filtros e Busca -->
+  <section class="filters">
+    <input type="text" id="searchBar" placeholder="Buscar por nome do produto">
+    <select id="categoryFilter">
+      <option value="">Todas as Categorias</option>
+      <option value="computadores">Computadores</option>
+      <option value="acessórios">Acessórios</option>
+      <option value="monitores">Monitores</option>
+      <option value="notebooks">Notebooks</option>
+      <option value="móveis">Móveis</option>
+    </select>
+    <select id="brandFilter">
+      <option value="">Todas as Marcas</option>
+      <option value="Marca A">Marca A</option>
+      <option value="Marca B">Marca B</option>
+      <option value="Marca C">Marca C</option>
+      <option value="Marca D">Marca D</option>
+      <option value="Marca E">Marca E</option>
+    </select>
+    <button onclick="applyFilters()">Filtrar</button>
+  </section>
+
+  <!-- Container de Produtos -->
+  <div id="product-container" class="product-container"></div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Loja de Informática. Todos os direitos reservados.</p>
+        <p>Formas de pagamento: Cartão de crédito, boleto, transferência bancária</p>
+        <div class="social-media">
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+        </div>
+    </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
